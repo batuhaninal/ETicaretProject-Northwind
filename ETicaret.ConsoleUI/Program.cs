@@ -4,7 +4,7 @@ using ETicaret.DataAccess.Concrete.EntityFramework.Repositories;
 
 ProductManager p = new ProductManager(new EfProductRepository());
 
-foreach (var item in p.GetProductDetails())
+foreach (var item in p.GetProductDetails().Data)
 {
     Console.WriteLine(item.ProductName+" = "+item.CategoryName);
 }
