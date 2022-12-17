@@ -33,10 +33,10 @@ namespace ETicaret.Business.Concrete
 
         public IDataResult<List<Product>> GetAll()
         {
-            if (DateTime.Now.Hour == 2)
-            {
-                return new ErrorDataResult<List<Product>>(Messages.MaintanceTime);
-            }
+            //if (DateTime.Now.Hour == 16)
+            //{
+            //    return new ErrorDataResult<List<Product>>(Messages.MaintanceTime);
+            //}
             return new SuccessDataResult<List<Product>>(_productRepository.GetAll(),Messages.ProductsListed);
         }
 
@@ -47,7 +47,12 @@ namespace ETicaret.Business.Concrete
 
         public IDataResult<Product> GetById(int productId)
         {
-            return new SuccessDataResult<Product>(_productRepository.Get(x => x.ProductId == productId));
+            var result = _productRepository.Get(x => x.ProductId == productId);
+            if (result == null)
+            {
+                return new ErrorDataResult<Product>("Verilen parametrede bir ürün bulunamadı.");
+            }
+            return new SuccessDataResult<Product>(result);
         }
 
         public IDataResult<List<Product>> GetByUnitPrice(decimal min, decimal max)

@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj" />
+    <ProjectReference Include="..\ETicaret.Business\ETicaret.Business.csproj" />
+    <ProjectReference Include="..\ETicaret.DataAccess\ETicaret.DataAccess.csproj" />
+    <ProjectReference Include="..\ETicaret.Entities\ETicaret.Entities.csproj" />
+  </ItemGroup>
+
+</Project>
