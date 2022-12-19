@@ -1,9 +1,13 @@
-﻿using Core.Utilities.Results;
+﻿using Core.Aspects.Autofac.Validation;
+using Core.CrossCuttingConcerns.Validations.FluentValidation;
+using Core.Utilities.Results;
 using ETicaret.Business.Abstract;
 using ETicaret.Business.Constants;
+using ETicaret.Business.ValidationRules.FluentValidation;
 using ETicaret.DataAccess.Abstract;
 using ETicaret.Entities.Concrete;
 using ETicaret.Entities.DTOs;
+using FluentValidation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,13 +25,13 @@ namespace ETicaret.Business.Concrete
             _productRepository = productDal;
         }
 
+        [ValidationAspect(typeof(ProductValidator))]
         public IResult Add(Product entity)
         {
-            if (entity.ProductName.Length<2)
-            {
-                return new ErrorResult(Messages.ProductNameInvalid);
-            }
+            //ValidationTool.Validate(new ProductValidator(), entity);
+
             _productRepository.Add(entity);
+
             return new SuccessResult(Messages.ProductAdded);
         }
 
