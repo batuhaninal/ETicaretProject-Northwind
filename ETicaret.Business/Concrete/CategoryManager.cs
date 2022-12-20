@@ -1,4 +1,5 @@
-﻿using ETicaret.Business.Abstract;
+﻿using Core.Utilities.Results;
+using ETicaret.Business.Abstract;
 using ETicaret.DataAccess.Abstract;
 using ETicaret.Entities.Concrete;
 using System;
@@ -18,14 +19,14 @@ namespace ETicaret.Business.Concrete
             _categoryRepository = categoryDal;
         }
 
-        public List<Category> GetAll()
+        public IDataResult<List<Category>> GetAll()
         {
-            return _categoryRepository.GetAll();
+            return new SuccessDataResult<List<Category>>(_categoryRepository.GetAll());
         }
 
-        public Category GetById(int categoryId)
+        public IDataResult<Category> GetById(int categoryId)
         {
-            return _categoryRepository.Get(x=>x.CategoryId == categoryId);
+            return new SuccessDataResult<Category>(_categoryRepository.Get(x=>x.CategoryId == categoryId));
         }
     }
 }

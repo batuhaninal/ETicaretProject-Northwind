@@ -62,3 +62,8 @@ C:\Users\np_ba\source\repos\ETicaretProject\ETicaret.ConsoleUI\obj\Debug\net6.0\
 C:\Users\np_ba\source\repos\ETicaretProject\ETicaret.ConsoleUI\obj\Debug\net6.0\ref\ETicaret.ConsoleUI.dll
 C:\Users\np_ba\source\repos\ETicaretProject\ETicaret.ConsoleUI\bin\Debug\net6.0\Core.dll
 C:\Users\np_ba\source\repos\ETicaretProject\ETicaret.ConsoleUI\bin\Debug\net6.0\Core.pdb
+C:\Users\np_ba\source\repos\ETicaretProject\ETicaret.ConsoleUI\bin\Debug\net6.0\Autofac.dll
+C:\Users\np_ba\source\repos\ETicaretProject\ETicaret.ConsoleUI\bin\Debug\net6.0\Autofac.Extensions.DependencyInjection.dll
+C:\Users\np_ba\source\repos\ETicaretProject\ETicaret.ConsoleUI\bin\Debug\net6.0\Autofac.Extras.DynamicProxy.dll
+C:\Users\np_ba\source\repos\ETicaretProject\ETicaret.ConsoleUI\bin\Debug\net6.0\Castle.Core.dll
+C:\Users\np_ba\source\repos\ETicaretProject\ETicaret.ConsoleUI\bin\Debug\net6.0\FluentValidation.dll
