@@ -4,6 +4,7 @@ using Core.Entities.Abstract;
 using Core.Utilities.Business;
 using Core.Utilities.Results;
 using ETicaret.Business.Abstract;
+using ETicaret.Business.BusinessAspects.Autofac;
 using ETicaret.Business.Constants;
 using ETicaret.Business.ValidationRules.FluentValidation;
 using ETicaret.DataAccess.Abstract;
@@ -29,6 +30,7 @@ namespace ETicaret.Business.Concrete
             _categoryService = categoryService;
         }
 
+        [SecuredOperation("product.add,admin")]
         [ValidationAspect(typeof(ProductValidator))]
         public IResult Add(Product entity)
         {

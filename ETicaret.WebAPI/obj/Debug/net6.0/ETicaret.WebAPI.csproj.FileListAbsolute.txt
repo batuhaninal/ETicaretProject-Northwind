@@ -71,3 +71,7 @@ C:\Users\np_ba\source\repos\ETicaretProject\ETicaret.WebAPI\bin\Debug\net6.0\Aut
 C:\Users\np_ba\source\repos\ETicaretProject\ETicaret.WebAPI\bin\Debug\net6.0\Castle.Core.dll
 C:\Users\np_ba\source\repos\ETicaretProject\ETicaret.WebAPI\bin\Debug\net6.0\Autofac.Extensions.DependencyInjection.dll
 C:\Users\np_ba\source\repos\ETicaretProject\ETicaret.WebAPI\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\np_ba\source\repos\ETicaretProject\ETicaret.WebAPI\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\np_ba\source\repos\ETicaretProject\ETicaret.WebAPI\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\np_ba\source\repos\ETicaretProject\ETicaret.WebAPI\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\np_ba\source\repos\ETicaretProject\ETicaret.WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
