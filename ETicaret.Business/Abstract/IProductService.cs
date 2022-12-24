@@ -18,5 +18,6 @@ namespace ETicaret.Business.Abstract
         IDataResult<Product> GetById(int productId);
         IResult Add(Product entity);
         IResult Update(Product entity);
+        IResult AddTransactionalTest(Product entity);
     }
 }

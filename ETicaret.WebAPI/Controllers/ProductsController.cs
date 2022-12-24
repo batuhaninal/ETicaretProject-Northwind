@@ -20,6 +20,17 @@ namespace ETicaret.WebAPI.Controllers
             _productService = productService;
         }
 
+        [HttpPost("transactiontest")]
+        public IActionResult TransactionTest(Product entity)
+        {
+            var result = _productService.AddTransactionalTest(entity);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
         [HttpGet("getall")]
         public IActionResult GetAll()
         {

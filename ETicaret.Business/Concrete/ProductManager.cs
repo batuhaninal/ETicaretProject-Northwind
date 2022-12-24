@@ -1,4 +1,7 @@
-﻿using Core.Aspects.Autofac.Validation;
+﻿using Core.Aspects.Autofac.Caching;
+using Core.Aspects.Autofac.Performance;
+using Core.Aspects.Autofac.Transaction;
+using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns.Validations.FluentValidation;
 using Core.Entities.Abstract;
 using Core.Utilities.Business;
@@ -32,6 +35,7 @@ namespace ETicaret.Business.Concrete
 
         [SecuredOperation("product.add,admin")]
         [ValidationAspect(typeof(ProductValidator))]
+        [CacheRemoveAspect("IProductService.Get")]
         public IResult Add(Product entity)
         {
             //ValidationTool.Validate(new ProductValidator(), entity);
@@ -47,6 +51,7 @@ namespace ETicaret.Business.Concrete
             return result;
         }
 
+        [CacheAspect]
         public IDataResult<List<Product>> GetAll()
         {
             //if (DateTime.Now.Hour == 16)
@@ -61,6 +66,8 @@ namespace ETicaret.Business.Concrete
             return new SuccessDataResult<List<Product>>(_productRepository.GetAll(x => x.CategoryId == categoryId));
         }
 
+        [CacheAspect]
+        [PerformanceAspect(5)]
         public IDataResult<Product> GetById(int productId)
         {
             var result = _productRepository.Get(x => x.ProductId == productId);
@@ -82,6 +89,7 @@ namespace ETicaret.Business.Concrete
         }
 
         [ValidationAspect(typeof(ProductValidator))]
+        [CacheRemoveAspect("IProductService.Get")]
         public IResult Update(Product entity)
         {
             throw new NotImplementedException();
@@ -115,6 +123,24 @@ namespace ETicaret.Business.Concrete
                 return new ErrorResult(Messages.CategoryLimitExceded);
             }
             return new SuccessResult();
+        }
+
+        [TransactionScopeAspect]
+        [CacheRemoveAspect("IProductService.Get")]
+        public IResult AddTransactionalTest(Product entity)
+        {
+            Add(entity);
+            if (entity.UnitPrice > 10)
+            {
+                throw new Exception("");
+            }
+
+
+            entity.ProductName += "Son eklenen";
+
+            Add(entity);
+
+            return null;
         }
     }
 }
