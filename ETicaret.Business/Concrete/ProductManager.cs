@@ -33,9 +33,10 @@ namespace ETicaret.Business.Concrete
             _categoryService = categoryService;
         }
 
-        [SecuredOperation("product.add,admin")]
+        //[SecuredOperation("product.add,admin")]
         [ValidationAspect(typeof(ProductValidator))]
         [CacheRemoveAspect("IProductService.Get")]
+        [TransactionScopeAspect]
         public IResult Add(Product entity)
         {
             //ValidationTool.Validate(new ProductValidator(), entity);

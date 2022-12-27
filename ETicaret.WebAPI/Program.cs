@@ -27,7 +27,10 @@ builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory())
 
 // Add services to the container.
 
+builder.Services.AddCors();
+
 builder.Services.AddControllers();
+
 
 var tokenOptions = builder.Configuration.GetSection("TokenOptions").Get<TokenOptions>();
 
@@ -66,6 +69,12 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(builder =>
+{
+    builder.WithOrigins("http://localhost:4200")
+    .AllowAnyHeader();
+});
 
 app.UseAuthentication();
 
