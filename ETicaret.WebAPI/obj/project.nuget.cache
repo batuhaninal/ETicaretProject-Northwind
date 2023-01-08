@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "FsjuATydDNKVmLS2U0sPLl06Hdrks3mvstBgV0XTvZVSPMULQIPCeJRW9iP1GOdP8uNx5IyQoyZI0VbCV+yXcA==",
+  "dgSpecHash": "JjUSsvq6iRLbm0yc+KEzQ78MWsIJ0Gg5W5b0g47S/epiy9RYyLu8q2bDK9PVlx4JfZ4Ts++U+k+8k0AUmG+Ikw==",
   "success": true,
   "projectFilePath": "C:\\Users\\np_ba\\source\\repos\\ETicaretProject\\ETicaret.WebAPI\\ETicaret.WebAPI.csproj",
   "expectedPackageFiles": [
@@ -141,7 +141,11 @@
     "C:\\Users\\np_ba\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
     "C:\\Users\\np_ba\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\np_ba\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\np_ba\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\np_ba\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\np_ba\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.12\\microsoft.netcore.app.host.win-x64.6.0.12.nupkg.sha512",
+    "C:\\Users\\np_ba\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.12\\microsoft.aspnetcore.app.ref.6.0.12.nupkg.sha512",
+    "C:\\Users\\np_ba\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.12\\microsoft.windowsdesktop.app.ref.6.0.12.nupkg.sha512",
+    "C:\\Users\\np_ba\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.12\\microsoft.netcore.app.ref.6.0.12.nupkg.sha512"
   ],
   "logs": []
 }
